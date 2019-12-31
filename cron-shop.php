@@ -74,9 +74,9 @@ else
 
         // Enviar e-mail de notificação
         if( empty( $panel_settings['panel_name'] ) )
-            $subject = "Open Game Panel :: Servidor quase a expirar";
+            $subject = "Open Game Panel :: Servidor a expirar";
         else
-            $subject = $panel_settings['panel_name'] . " :: Servidor quase a expirar";
+            $subject = $panel_settings['panel_name'] . " :: Servidor a expirar";
 
         $email = $db->resultQuery( "SELECT DISTINCT users_email 
                                     FROM " . $table_prefix . "users 
@@ -93,9 +93,9 @@ else
         $mail = mymail($email, $subject, $message, $panel_settings);
 
         if ($mail)
-            echo "Quase Expired server email send successful.";
+            echo "Expired server email send successful.";
         else
-            echo "Quase Expired server email send UNSUCCESSFUL.";
+            echo "Expired server email send UNSUCCESSFUL.";
     }
 }
 
