@@ -60,12 +60,13 @@ else
                                     FROM " . $table_prefix . "users 
                                     WHERE user_id = " . $user_home['user_id'])[0]["users_email"];
 
-         $message = "Um ou mais dos seus servidores expiraram. Faça o login <a href='https://hlc.ovh/'>aqui</a> e vá até a loja e, em seguida, ao carrinho de compras para estender seu (s) servidor (es). <br>
-		     <br> Para pagamento sem taxa fale com a staff antes de acabar a data <a href='https://discord.me/sfservidores'>aqui</a><br>
-                     <br> Os seus servidores serão desativados daqui a 5 dias se não forem renovados, a factura é removida do seu carrinho, e os servidores ficam inutilizáveis.<br>                     
+        $message = "Um ou mais dos seus servidores expiraram. Faça o login <a href='https://hlc.ovh/'>aqui</a> e vá até a loja e, em seguida, ao carrinho de compras para estender seu (s) servidor (es). <br>
+		     <br> Para pagamento sem taxa fale com a staff antes de acabar a data <a href='https://discord.me/sfservidores'>aqui.</a><br>
+                     <br> Os seus servidores serão desativados daqui a 7 dias se não forem renovados, a factura é removida do seu carrinho, e os servidores ficam inutilizáveis daqui a 12 dias.<br>                     
                      <br> Atenção não vai receber mais nenhuma notificação!!<br>
-                     <br>~ <br> Obrigado!                  
-                     <br> Atentamente equipa de staff ";
+                     <br>~ <br> Obrigado!
+                     <br> Atentamente equipa de staff.<br>
+                     <br> Esta é uma mensagem automática, por favor, não responda!";
 
         $mail = mymail($email, $subject, $message, $panel_settings);
 
